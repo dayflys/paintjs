@@ -77,7 +77,11 @@ function handleCM(event){
 }
 
 function handleSaveClick(){
-
+    const image = canvas.toDataURL();
+    const link = document.createElement("a");
+    link.href = image;
+    link.download = "PainJS[EXPORT]";
+    link.click();
 }
 if(canvas){
     canvas.addEventListener("mousemove",onMouseMove);
